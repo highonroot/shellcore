@@ -1,0 +1,14 @@
+#!/bin/bash
+
+cmd="$1" 
+shift 
+
+case "$cmd" in 
+    netprobe) bash commands/netprobe.sh "$@" ;; 
+    process) bash commands/process.sh "$@" ;; 
+    info) bash commands/info.sh "$@" ;; 
+    cleanup) bash commands/cleanup.sh "$@" ;; 
+    sysinfo) bash commands/sysinfo.sh "$@" ;;
+    perm) bash commands/perm.sh "$@" ;; 
+    *) echo "Usage: shellcore {netprobe|process|info|cleanup|sysinfo|perm}" ;;
+esac
